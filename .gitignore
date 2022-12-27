@@ -1,0 +1,3 @@
+# Project exclude paths
+/CustomerService/target/
+/ItemService/target/
