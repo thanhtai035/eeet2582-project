@@ -10,8 +10,12 @@
   <version>1.0-SNAPSHOT</version>
 
   <modules>
-    <module>ItemService</module>
-    <module>CustomerService</module>
+    <module>item-service</module>
+    <module>customer-service</module>
+    <module>gateway</module>
+    <module>eureka-server</module>
+    <module>order-service</module>
+    <module>okta-service</module>
   </modules>
 
   <name>eeet2582-project</name>
@@ -21,24 +25,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <spring.boot.maven.plugin.version>2.5.6</spring.boot.maven.plugin.version>
-    <spring.boot.dependencies.version>2.5.6</spring.boot.dependencies.version>
+    <spring.boot.maven.plugin.version>2.7.3</spring.boot.maven.plugin.version>
+    <spring.boot.dependencies.version>2.7.3</spring.boot.dependencies.version>
+    <spring.cloud-version>2021.0.2</spring.cloud-version>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <scope>runtime</scope>
-    </dependency>
+
   </dependencies>
 
   <dependencyManagement>
@@ -49,6 +42,13 @@
         <version>${spring.boot.dependencies.version}</version>
         <scope>import</scope>
         <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring.cloud-version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

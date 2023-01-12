@@ -8,7 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ItemService" />
         <module name="CustomerService" />
+        <module name="okta-service" />
+        <module name="order-service" />
+        <module name="eureka-server" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-service" target="18" />
+      <module name="customer-service" target="17" />
+      <module name="item-service" target="17" />
+      <module name="OrderService" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>

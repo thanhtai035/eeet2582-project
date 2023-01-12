@@ -1,0 +1,6 @@
+  okta:
+    oauth2:
+      issuer: https://dev-27044634.okta.com/oauth2/default
+      client-id: 0oa7w1fqz4BD6XOhd5d7
+      client-secret: Wqh7wZh3hz0FivQo89IuxkTK02SdWILaRhyoSCCl
+      redirect-uri: /authorization-code/callback

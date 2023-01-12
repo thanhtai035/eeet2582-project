@@ -27,6 +27,11 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+  redis:
+    image: redis:5.0.7
+    ports:
+      - 6379:6379
+
 #  eureka-server:
 #    image: amigoscode/eureka-server:latest
 #    container_name: eureka-server
@@ -97,6 +102,9 @@ networks:
     driver: bridge
   spring:
     driver: bridge
+  app-network:
+    driver: bridge
+
 
 volumes:
   postgres:
